@@ -5,6 +5,10 @@ FROM resin/%%RESIN_MACHINE_NAME%%-node:6.9
 
 # Install apt deps
 RUN apt-get update && apt-get install -y \
+  python \
+  make \
+  g++ \
+  gcc \
   apt-utils \
   xserver-xorg-core \
   xserver-xorg-input-all \
@@ -47,7 +51,26 @@ COPY "$SOURCEFOLDER/app/package.json" ./
 
 # This install npm dependencies on the resin.io build server,
 # making sure to clean up the artifacts it creates in order to reduce the image size.
-RUN JOBS=MAX npm install -g node-red node-red-contrib-resinio && \
+RUN JOBS=MAX npm install -g node-red \
+node-red-contrib-resinio \
+serialport \
+node-red-admin \
+i2c \
+i2c-bus \
+node-red-contrib-i2c \
+node-red-node-serialport \
+node-red-contrib-brads-i2c-nodes \
+node-grovepi sleep node-red-contrib-grovepi \
+node-red-node-grovepi \
+node-red-grovepi-nodes node-red-contrib-1wire \
+ds18b20 \
+node-red-contrib-sensor-ds18b20 \
+node-red-contrib-ds18b20-sensor \
+node-red-contrib-ds18b20 \
+node-red-contrib-bigtimer \
+node-red-contrib-couchdb \
+node-red-dashboard \
+&& \
   npm i --production && npm cache clean && rm -rf /tmp/*
 
 # This will copy all files in our root to the working  directory in the container
