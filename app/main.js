@@ -31,7 +31,7 @@
         "URL_LAUNCHER_HEIGHT": (process.env.URL_LAUNCHER_HEIGHT == null) ? 1080 : parseInt(process.env.URL_LAUNCHER_HEIGHT),
         "URL_LAUNCHER_TITLE": (process.env.URL_LAUNCHER_TITLE == null) ? "RESIN.IO" : process.env.URL_LAUNCHER_TITLE,
         "URL_LAUNCHER_CONSOLE": process.env.URL_LAUNCHER_CONSOLE == null ? 0 : process.env.URL_LAUNCHER_CONSOLE === '1',
-        "URL_LAUNCHER_URL": (process.env.URL_LAUNCHER_URL == null) ? "http://127.0.0.1" : process.env.URL_LAUNCHER_URL,
+        "URL_LAUNCHER_URL": (process.env.URL_LAUNCHER_URL == null) ? "http://127.0.0.1/" : process.env.URL_LAUNCHER_URL,
         "URL_LAUNCHER_ZOOM": (process.env.URL_LAUNCHER_ZOOM == null) ? 1.0 : parseFloat(process.env.URL_LAUNCHER_ZOOM),
         "URL_LAUNCHER_OVERLAY_SCROLLBARS": process.env.URL_LAUNCHER_CONSOLE == null ? 0 : process.env.URL_LAUNCHER_CONSOLE === '1'
     };
