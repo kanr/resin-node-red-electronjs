@@ -55,12 +55,14 @@ RUN JOBS=MAX npm install -g node-red \
 node-red-contrib-resinio \
 serialport \
 node-red-admin \
-i2c \
-i2c-bus \
-node-red-contrib-i2c \
+#i2c \
+#i2c-bus \
+#node-red-contrib-i2c \
+#node-red-contrib-brads-i2c-nodes \
 node-red-node-serialport \
-node-red-contrib-brads-i2c-nodes \
-node-grovepi sleep node-red-contrib-grovepi \
+node-grovepi \
+sleep \
+node-red-contrib-grovepi \
 node-red-node-grovepi \
 node-red-grovepi-nodes node-red-contrib-1wire \
 ds18b20 \
@@ -69,6 +71,7 @@ node-red-contrib-ds18b20-sensor \
 node-red-contrib-ds18b20 \
 node-red-contrib-bigtimer \
 node-red-contrib-couchdb \
+node-red-contrib-gpio \
 node-red-dashboard \
 && \
   npm i --production && npm cache clean && rm -rf /tmp/*
