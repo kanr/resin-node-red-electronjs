@@ -55,6 +55,7 @@ RUN JOBS=MAX npm install -g node-red \
 node-red-contrib-resinio \
 serialport \
 node-red-admin \
+node-red-contrib-cpu \
 #i2c \
 #i2c-bus \
 #node-red-contrib-i2c \
