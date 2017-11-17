@@ -64,7 +64,7 @@ node-red-node-serialport \
 node-grovepi \
 sleep \
 node-red-contrib-grovepi \
-#node-red-node-grovepi \
+node-red-node-grovepi \
 #node-red-grovepi-nodes node-red-contrib-1wire \
 #ds18b20 \
 #node-red-contrib-sensor-ds18b20 \
