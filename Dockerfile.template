@@ -72,7 +72,8 @@ node-red-node-grovepi \
 #node-red-contrib-ds18b20 \
 node-red-contrib-bigtimer \
 node-red-contrib-couchdb \
-node-red-contrib-gpio raspi-io \
+#node-red-contrib-gpio \
+raspi-io \
 node-red-dashboard \
 && \
   npm i --production && npm cache clean && rm -rf /tmp/*
