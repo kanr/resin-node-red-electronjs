@@ -56,6 +56,7 @@ node-red-contrib-resinio \
 serialport \
 node-red-admin \
 node-red-contrib-os \
+npm install node-red-contrib-usbcamera \
 #i2c \
 i2c-bus \
 #node-red-contrib-i2c \
