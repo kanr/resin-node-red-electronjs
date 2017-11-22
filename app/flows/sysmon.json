@@ -1,0 +1,141 @@
+[
+    {
+        "id": "d9c714c7.cdabe8",
+        "type": "tab",
+        "label": "System Monitor",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7fdf627d.48a81c",
+        "type": "inject",
+        "z": "d9c714c7.cdabe8",
+        "name": "Read memory every 1 minute",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "x": 183.5,
+        "y": 73,
+        "wires": [
+            [
+                "f5718cd2.b431a"
+            ]
+        ]
+    },
+    {
+        "id": "f5718cd2.b431a",
+        "type": "Memory",
+        "z": "d9c714c7.cdabe8",
+        "name": "",
+        "x": 408.5,
+        "y": 72,
+        "wires": [
+            [
+                "825f1a69.50db08"
+            ]
+        ]
+    },
+    {
+        "id": "d5fddd12.a601b",
+        "type": "ui_chart",
+        "z": "d9c714c7.cdabe8",
+        "name": "Mem Usage",
+        "group": "578eb2cb.fcc8ac",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Memory Usage",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 863.5,
+        "y": 49,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "825f1a69.50db08",
+        "type": "change",
+        "z": "d9c714c7.cdabe8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.memusage",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 627.5,
+        "y": 72,
+        "wires": [
+            [
+                "ee99358e.52e3b8",
+                "d5fddd12.a601b"
+            ]
+        ]
+    },
+    {
+        "id": "ee99358e.52e3b8",
+        "type": "debug",
+        "z": "d9c714c7.cdabe8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 865,
+        "y": 88,
+        "wires": []
+    },
+    {
+        "id": "578eb2cb.fcc8ac",
+        "type": "ui_group",
+        "z": "",
+        "name": "Memory",
+        "tab": "98a925fa.e959d8",
+        "order": 1,
+        "disp": true,
+        "width": "10"
+    },
+    {
+        "id": "98a925fa.e959d8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "System Monitor",
+        "icon": "dashboard",
+        "order": 3
+    }
+]
