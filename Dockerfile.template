@@ -46,6 +46,12 @@ RUN printf "%s\n" "${PWD##}" > SOURCEFOLDER
 RUN mkdir -p /usr/src/app/
 WORKDIR /usr/src/app
 
+#Install build dependencies for platformIO
+RUN apk update && apk upgrade &&apk add avr-libc avrdude
+
+# Install PlatformIO
+RUN python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/develop/scripts/get-platformio.py)"
+
 # Move package.json to filesystem
 COPY "$SOURCEFOLDER/app/package.json" ./
 
