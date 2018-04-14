@@ -49,7 +49,6 @@
     }
 
     app.setPath("userData", "/data/electron");
-
     /*
       we initialize our application display as a callback of the electronJS "ready" event
     */
