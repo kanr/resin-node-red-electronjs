@@ -110,7 +110,7 @@ module.exports = {
             permissions: "*"
         }],
         default: {
-            permissions: "read"
+            permissions: "*"
         }
     },
 
